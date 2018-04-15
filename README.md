@@ -1,33 +1,27 @@
-# \<Hullo Assignment\>
+#Hullo Assignment
 
-Chat App
+##Chat App
 
-## Install the Polymer-CLI
+### Gulp Build
+Output of gulp build is in folder `dist`.
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+### To run locally 
+(It is assumed that you have `polymer-cli` installed .)
 
-## Viewing Your Application
 
-```
-$ polymer serve
-```
+To install all the Bower Components run below command in root project directory.
 
-## Building Your Application
+    bower install
 
-```
-$ polymer build
-```
 
-This will create builds of your application in the `build/` directory, optimized to be served in production. You can then serve the built versions by giving `polymer serve` a folder to serve from:
+To install all the required node modules run below command in root project directory.
 
-```
-$ polymer serve build/default
-```
+    npm install
+    
+To start the app , run below command again in root directory
 
-## Running Tests
+    polymer serve 
+    
+Finally the App is running and we need to open below URL in browser 
 
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+    http://localhost:8081/
