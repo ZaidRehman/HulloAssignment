@@ -1,6 +1,6 @@
-#Hullo Assignment
+# Hullo Assignment
 
-##Chat App
+## Chat App
 
 ### Gulp Build
 Output of gulp build is in folder `dist`.
