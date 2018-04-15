@@ -25,3 +25,7 @@ To start the app , run below command again in root directory
 Finally the App is running and we need to open below URL in browser 
 
     http://localhost:8081/
+
+
+Output Screenshot
+![alt text](https://github.com/ZaidRehman/HulloAssignment/blob/master/screenshot.png)
