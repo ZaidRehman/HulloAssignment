@@ -28,6 +28,7 @@
         <template>
           <div class$="[[item.selected]] sidebar-text">
             [[item.name]]
+            "123"
           </div>
         </template>
       </iron-list>
@@ -35,11 +36,13 @@
   </template>
 
   <script>
-    
-    class ThreadView extends Polymer.Element {
-      static get is() { return 'thread-view'; }
-      static get properties() {
-        return {
+    Polymer({
+        is: 'thread-view',
+        properties: {
+          response: {
+            type: Object,
+            notify: true
+          },
           prop1: {
             type: String,
             value: 'THread View'
@@ -53,10 +56,45 @@
               {name: "Kevin",selected:""}
             ]
           }
-        };
-      }
-    }
+        },
+        onResponse: function(e) {
+          var ajax = this.$.ajax;
+          var originalUrl = 'https://www.googleapis.com/books/v1/volumes?q=polymer';
+          var url = ajax.lastRequest.xhr.responseURL;
+          if (url.includes(originalUrl)) {
+            console.log('this is the first request');
+            for (var i = 0; i < ajax.lastResponse.items.length; i++) {
+              ajax.url = this.url(ajax.lastResponse.items[i].id);
+            }            
+          } else {
+            console.log(ajax.lastResponse.selfLink);
+          }
+        },
+        url: function(id) {
+          return "https://www.googleapis.com/books/v1/volumes/" + id;
+        }
+      });
+    // class ThreadView extends Polymer.Element {
+    //   static get is() { return 'thread-view'; }
+    //   static get properties() {
+    //     return {
+    //       prop1: {
+    //         type: String,
+    //         value: 'THread View'
+    //       },
+    //       data1:{
+    //         type: Array,
+    //         value: [
+    //           {name: "Mike",selected:""},
+    //           {name: "Molly",selected:""},
+    //           {name: "Peter",selected:"selected-yes"},
+    //           {name: "Kevin",selected:""}
+    //         ]
+    //       }
+    //     };
+    //   }
+    // }
 
-    window.customElements.define(ThreadView.is, ThreadView);
+    // window.customElements.define(ThreadView.is, ThreadView);
   </script>
 </dom-module>
