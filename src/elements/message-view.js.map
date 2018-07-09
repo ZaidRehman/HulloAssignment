@@ -1,0 +1,1 @@
+{"version":3,"file":"message-view.js","sourceRoot":"","sources":["message-view.ts"],"names":[],"mappings":"AACA,IAAI,WAAW,CAAA;AAEf,WAAW,GAAG,OAAO,CACrB;IACM,EAAE,EAAE,cAAc;IAElB,UAAU,EACV;QACE,IAAI,EAAE;YACN,IAAI,EAAE,MAAM;YACZ,KAAK,EAAE,cAAc;SACpB;KACJ;CAED,CAAC,CAAC"}

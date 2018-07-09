@@ -1,13 +1,60 @@
-const del = require('del');
-const gulp = require('gulp');
-const polymerBuildUtils = require('gulp-polymer-build-utils');
+const gulp = require('gulp')
+const gutil = require('gulp-util');
+const webpack = require('webpack-stream');
+const vulcanize = require('gulp-vulcanize');
+const ts = require('gulp-typescript');
+var tsProject = ts.createProject('tsconfig.json');
 const runSequence = require('run-sequence');
-gulp.task('default', cb => {
-  return runSequence('dist:prepare', 'inline-references', cb);
+const rename = require("gulp-rename");
+
+gulp.task('default', function () {
+  return gutil.log('Gulp is running!')
 });
-gulp.task('dist:prepare', ['dist:clean'], () => {
-  const config = require('./polymer.json');
-  return polymerBuildUtils.build(config)()
-    .pipe(gulp.dest('dist'));
+
+
+gulp.task('tsc-build', () => {
+    var tsResult = gulp.src("src/**/*.ts",{base: "."}) 
+        .pipe(tsProject());
+ 
+    return tsResult.js.pipe(gulp.dest('.'));
 });
-gulp.task('dist:clean', () => del('dist'));
+
+
+
+gulp.task('tsc',() =>{
+  return gulp.src('src/**/*.ts',{ base: "."})
+        .pipe(ts({
+            target: "es5",
+            noImplicitAny: true,
+        }))
+        .pipe(gulp.dest('.'));
+})
+
+gulp.task('webpack', () => {
+  return gulp.src('src/index.js')
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest("dist"))
+});
+
+gulp.task('moveStyle', () => {
+  return gulp.src('style.css')
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task('vulcanize', () => {
+  return gulp.src('index.html')
+    .pipe(vulcanize({
+      stripComments: true,
+      inlineScripts: true,
+      inlineCss: true
+    }))
+    .pipe(rename('index.vulcanized.html'))
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('build', function (done) {
+  runSequence('tsc-build', 'moveStyle', 'webpack', 'vulcanize', function () {
+    console.log('Build Completed');
+    done();
+  });
+});

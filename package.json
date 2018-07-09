@@ -1,0 +1,32 @@
+{
+  "name": "tsexample3",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "reflect-metadata": "^0.1.12"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-polymer-build-utils": "^1.5.0",
+    "gulp-rename": "^1.3.0",
+    "gulp-tsc": "^1.3.2",
+    "gulp-typescript": "^5.0.0-alpha.3",
+    "gulp-util": "^3.0.8",
+    "gulp-vulcanize": "^7.0.0",
+    "polymer-webpack-loader": "^1.2.6",
+    "requirejs": "^2.3.5",
+    "run-sequence": "^2.2.1",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.9.2",
+    "webpack": "^4.14.0",
+    "webpack-stream": "^4.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC"
+}

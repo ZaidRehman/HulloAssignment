@@ -1,4 +1,3 @@
-<link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
 
@@ -39,21 +38,6 @@
         <!-- <h2>Helo</h2> -->
     </div>
   </template>
-
-  <script>
-    
-    class MessageView extends Polymer.Element {
-      static get is() { return 'message-view'; }
-      static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'Message View'
-          }
-        };
-      }
-    }
-
-    window.customElements.define(MessageView.is, MessageView);
-  </script>
 </dom-module>
+
+<script type="text/javascript" src="message-view.js"></script>
