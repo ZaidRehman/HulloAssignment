@@ -158,4 +158,7 @@ src/**/*.js
 src/**/*.map
 src/**/*.d.ts
 
+# Exclude Vulcanized output 
+index.vulcanized.html
+
 # End of https://www.gitignore.io/api/node,linux,bower,macos,windows,polymer
