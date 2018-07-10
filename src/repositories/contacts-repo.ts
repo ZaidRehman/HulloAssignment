@@ -15,13 +15,13 @@ export class ContactRepoImpl implements IContactRepo {
         let ret: Contact[] = [];
         let arr = [{
             id: "0",
-            name: "test"
+            name: "Molly"
         },{
             id: "1",
-            name: "test1"
+            name: "Peter"
         },{
             id: "2",
-            name: "test2"
+            name: "Kira"
         }];
 
         arr.forEach(contact => {

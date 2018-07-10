@@ -16,17 +16,17 @@ export class MessageRepoImpl implements IMessagesRepo {
         let arr = [
             {
                 id: "0",
-                name: "test0",
+                name: "Peter",
                 text: "test0"
             },
             {
                 id: "1",
-                name: "test1",
+                name: "Jhon",
                 text: "test1"
             },
             {
                 id: "2",
-                name: "test2",
+                name: "Peter",
                 text: "test2"
             },
         ]
