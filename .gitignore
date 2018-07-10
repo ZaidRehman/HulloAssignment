@@ -153,6 +153,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Exclude webpack output
+dist/
+
 # Exclude TypeScript complied files 
 src/**/*.js
 src/**/*.map
