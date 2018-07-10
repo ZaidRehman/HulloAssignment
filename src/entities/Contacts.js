@@ -1,18 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Contacts = (function () {
-    function Contacts() {
-        this.contacts = [
-            { name: "Mike" },
-            { name: "Molly" },
-            { name: "Peter" },
-            { name: "Mesut" },
-            { name: "Ozil" }
-        ];
+var Contact = (function () {
+    function Contact(id, name) {
+        this.id = id;
+        this.name = name;
     }
-    Contacts.prototype.log = function () {
-        console.log("bar");
+    Contact.prototype.toString = function () {
+        return this.name + " -- " + this.phone;
     };
-    return Contacts;
+    return Contact;
 }());
-exports.Contacts = Contacts;
+exports.Contact = Contact;

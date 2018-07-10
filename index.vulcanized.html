@@ -16,6 +16,24 @@
   
   
 
+  </head>
+  
+  <body class="body">
+    
+    <div>
+      
+      <custom-header></custom-header>
+      <div style="display: inline-flex;width: 100%;height: calc(100vh - 43px);">
+        <div style="width: 30%;">
+          <thread-view></thread-view>
+        </div>
+        <div style="width: 70%;">
+          <chat-view></chat-view>
+          <message-view></message-view>
+        </div>
+      </div>
+    </div>
+  
   <script>/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -78,7 +96,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -145,7 +163,7 @@ module.exports = RegisterHtmlTemplate;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-__webpack_require__(19);
+__webpack_require__(20);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -6193,32 +6211,17 @@ RegisterHtmlTemplate.toBody(" <style is=\"custom-style\">:root{--google-red-100:
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var TypeBindingScopeEnum;
-(function (TypeBindingScopeEnum) {
-    TypeBindingScopeEnum[TypeBindingScopeEnum["Transient"] = 0] = "Transient";
-    TypeBindingScopeEnum[TypeBindingScopeEnum["Singleton"] = 1] = "Singleton";
-})(TypeBindingScopeEnum || (TypeBindingScopeEnum = {}));
-exports.TypeBindingScopeEnum = TypeBindingScopeEnum;
-
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
 
 __webpack_require__(1);
 
-__webpack_require__(37);
+__webpack_require__(32);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" <style is=\"custom-style\">:root{--paper-font-common-base:{font-family:Roboto,Noto,sans-serif;-webkit-font-smoothing:antialiased};--paper-font-common-code:{font-family:'Roboto Mono',Consolas,Menlo,monospace;-webkit-font-smoothing:antialiased};--paper-font-common-expensive-kerning:{text-rendering:optimizeLegibility};--paper-font-common-nowrap:{white-space:nowrap;overflow:hidden;text-overflow:ellipsis};--paper-font-display4:{@apply(--paper-font-common-base);@apply(--paper-font-common-nowrap);font-size:112px;font-weight:300;letter-spacing:-.044em;line-height:120px};--paper-font-display3:{@apply(--paper-font-common-base);@apply(--paper-font-common-nowrap);font-size:56px;font-weight:400;letter-spacing:-.026em;line-height:60px};--paper-font-display2:{@apply(--paper-font-common-base);font-size:45px;font-weight:400;letter-spacing:-.018em;line-height:48px};--paper-font-display1:{@apply(--paper-font-common-base);font-size:34px;font-weight:400;letter-spacing:-.01em;line-height:40px};--paper-font-headline:{@apply(--paper-font-common-base);font-size:24px;font-weight:400;letter-spacing:-.012em;line-height:32px};--paper-font-title:{@apply(--paper-font-common-base);@apply(--paper-font-common-nowrap);font-size:20px;font-weight:500;line-height:28px};--paper-font-subhead:{@apply(--paper-font-common-base);font-size:16px;font-weight:400;line-height:24px};--paper-font-body2:{@apply(--paper-font-common-base);font-size:14px;font-weight:500;line-height:24px};--paper-font-body1:{@apply(--paper-font-common-base);font-size:14px;font-weight:400;line-height:20px};--paper-font-caption:{@apply(--paper-font-common-base);@apply(--paper-font-common-nowrap);font-size:12px;font-weight:400;letter-spacing:.011em;line-height:20px};--paper-font-menu:{@apply(--paper-font-common-base);@apply(--paper-font-common-nowrap);font-size:13px;font-weight:500;line-height:24px};--paper-font-button:{@apply(--paper-font-common-base);@apply(--paper-font-common-nowrap);font-size:14px;font-weight:500;letter-spacing:.018em;line-height:24px;text-transform:uppercase};--paper-font-code2:{@apply(--paper-font-common-code);font-size:14px;font-weight:700;line-height:20px};--paper-font-code1:{@apply(--paper-font-common-code);font-size:14px;font-weight:500;line-height:20px};}</style> ");
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -6241,17 +6244,32 @@ RegisterHtmlTemplate.toBody(" <style is=\"custom-style\">[hidden]{display:none!i
 
 
 /***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var TypeBindingScopeEnum;
+(function (TypeBindingScopeEnum) {
+    TypeBindingScopeEnum[TypeBindingScopeEnum["Transient"] = 0] = "Transient";
+    TypeBindingScopeEnum[TypeBindingScopeEnum["Singleton"] = 1] = "Singleton";
+})(TypeBindingScopeEnum || (TypeBindingScopeEnum = {}));
+exports.TypeBindingScopeEnum = TypeBindingScopeEnum;
+
+
+/***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(21);
+__webpack_require__(22);
 
 __webpack_require__(2);
 
-__webpack_require__(22);
+__webpack_require__(23);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"iron-list\"> <template> <style>:host{display:block}@media only screen and (-webkit-max-device-pixel-ratio:1){:host{will-change:transform}}#items{@apply(--iron-list-items-container);position:relative}:host(:not([grid])) #items>::content>*{width:100%}#items>::content>*{box-sizing:border-box;margin:0;position:absolute;top:0;will-change:transform}</style> <array-selector id=\"selector\" items=\"{{items}}\" selected=\"{{selectedItems}}\" selected-item=\"{{selectedItem}}\"> </array-selector> <div id=\"items\"> <content></content> </div> </template> </dom-module> ");
@@ -7876,110 +7894,6 @@ RegisterHtmlTemplate.register(" <dom-module id=\"iron-list\"> <template> <style>
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = __webpack_require__(9);
-var Messages_1 = __webpack_require__(10);
-var Contacts_1 = __webpack_require__(11);
-var User_1 = __webpack_require__(28);
-var kernel = new inversify_1.Kernel();
-exports.kernel = kernel;
-kernel.bind(new inversify_1.TypeBinding("MessagesRepo", Messages_1.Messages));
-kernel.bind(new inversify_1.TypeBinding("ContactsRepo", Contacts_1.Contacts));
-kernel.bind(new inversify_1.TypeBinding("UserRepo", User_1.Person));
-
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var kernel_1 = __webpack_require__(24);
-exports.Kernel = kernel_1.Kernel;
-var type_binding_1 = __webpack_require__(26);
-exports.TypeBinding = type_binding_1.TypeBinding;
-var type_binding_scope_1 = __webpack_require__(4);
-exports.TypeBindingScopeEnum = type_binding_scope_1.TypeBindingScopeEnum;
-var inject_annotation_1 = __webpack_require__(27);
-exports.Inject = inject_annotation_1.Inject;
-
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Messages = (function () {
-    function Messages() {
-        this.sender = {
-            name: "Jhon",
-            sender: true
-        };
-        this.receiver = {
-            name: "Peter",
-            sender: false
-        };
-        this.messages = [{
-                time: "",
-                text: "Hi!!!",
-                sender: this.sender.name,
-                receiver: this.receiver.name
-            },
-            {
-                time: "",
-                text: "Hey, How are you",
-                sender: this.receiver.name,
-                receiver: this.sender.name
-            },
-            {
-                time: "",
-                text: "I am fine!!",
-                sender: this.sender.name,
-                receiver: this.receiver.name
-            }];
-    }
-    Messages.prototype.log = function () {
-        console.log("foo");
-    };
-    return Messages;
-}());
-exports.Messages = Messages;
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Contacts = (function () {
-    function Contacts() {
-        this.contacts = [
-            { name: "Mike" },
-            { name: "Molly" },
-            { name: "Peter" },
-            { name: "Mesut" },
-            { name: "Ozil" }
-        ];
-    }
-    Contacts.prototype.log = function () {
-        console.log("bar");
-    };
-    return Contacts;
-}());
-exports.Contacts = Contacts;
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
 
 __webpack_require__(1);
 
@@ -8269,7 +8183,7 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 13 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -8379,7 +8293,7 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 14 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -8426,7 +8340,7 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 15 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -8439,7 +8353,7 @@ RegisterHtmlTemplate.toBody(" <style is=\"custom-style\">:root{--primary-text-co
 
 
 /***/ }),
-/* 16 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -9066,26 +8980,169 @@ RegisterHtmlTemplate.register(" <dom-module id=\"paper-ripple\"> <template> <sty
 
 
 /***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+var MessageView;
+MessageView = Polymer({
+    is: 'message-view',
+    properties: {
+        prop: {
+            type: String,
+            value: 'Message View'
+        }
+    },
+});
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var inversify_1 = __webpack_require__(15);
+var messages_repo_1 = __webpack_require__(16);
+var contacts_repo_1 = __webpack_require__(17);
+var user_1 = __webpack_require__(51);
+var kernel = new inversify_1.Kernel();
+exports.kernel = kernel;
+kernel.bind(new inversify_1.TypeBinding("MessageRepoImpl", messages_repo_1.MessageRepoImpl));
+kernel.bind(new inversify_1.TypeBinding("ContactRepoImpl", contacts_repo_1.ContactRepoImpl));
+kernel.bind(new inversify_1.TypeBinding("User", user_1.User));
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var kernel_1 = __webpack_require__(45);
+exports.Kernel = kernel_1.Kernel;
+var type_binding_1 = __webpack_require__(47);
+exports.TypeBinding = type_binding_1.TypeBinding;
+var type_binding_scope_1 = __webpack_require__(6);
+exports.TypeBindingScopeEnum = type_binding_scope_1.TypeBindingScopeEnum;
+var inject_annotation_1 = __webpack_require__(48);
+exports.Inject = inject_annotation_1.Inject;
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var messages_1 = __webpack_require__(49);
+var MessageRepoImpl = (function () {
+    function MessageRepoImpl() {
+    }
+    MessageRepoImpl.prototype.save = function (message) {
+        return;
+    };
+    MessageRepoImpl.prototype.getAll = function () {
+        var ret = [];
+        var arr = [
+            {
+                id: "0",
+                name: "test0",
+                text: "test0"
+            },
+            {
+                id: "1",
+                name: "test1",
+                text: "test1"
+            },
+            {
+                id: "2",
+                name: "test2",
+                text: "test2"
+            },
+        ];
+        arr.forEach(function (message) {
+            ret.push(new messages_1.Message(message.id, message.name, message.text));
+        });
+        return ret;
+    };
+    return MessageRepoImpl;
+}());
+exports.MessageRepoImpl = MessageRepoImpl;
+
+
+/***/ }),
 /* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var contacts_1 = __webpack_require__(50);
+var ContactRepoImpl = (function () {
+    function ContactRepoImpl() {
+    }
+    ContactRepoImpl.prototype.save = function (contact) {
+        localStorage.setItem(contact.id, JSON.stringify(contact));
+        return contact;
+    };
+    ContactRepoImpl.prototype.getAll = function () {
+        var ret = [];
+        var arr = [{
+                id: "0",
+                name: "test"
+            }, {
+                id: "1",
+                name: "test1"
+            }, {
+                id: "2",
+                name: "test2"
+            }];
+        arr.forEach(function (contact) {
+            ret.push(new contacts_1.Contact(contact.id, contact.name));
+        });
+        return ret;
+    };
+    return ContactRepoImpl;
+}());
+exports.ContactRepoImpl = ContactRepoImpl;
+
+
+/***/ }),
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_elements_chat_view_html__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_elements_chat_view_html__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_elements_chat_view_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_elements_chat_view_html__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_elements_message_view_html__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_elements_message_view_html__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_elements_message_view_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__src_elements_message_view_html__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_elements_thread_view_html__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_elements_thread_view_html__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_elements_thread_view_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__src_elements_thread_view_html__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_elements_header1_html__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_elements_header1_html__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_elements_header1_html___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__src_elements_header1_html__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_elements_chat_view__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_elements_chat_view___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__src_elements_chat_view__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_elements_message_view__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_elements_message_view___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__src_elements_message_view__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_elements_thread_view__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_elements_thread_view___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__src_elements_thread_view__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_elements_header1__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_elements_header1___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__src_elements_header1__);
+
+
+
+
 
 
 
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -9094,15 +9151,13 @@ __webpack_require__(7);
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"chat-view\"> <template> <style>.chat{min-height:100%;height:auto!important;height:100%;margin:0 auto -70px}.chat-text-name{display:block;width:auto!important;font-size:20px}.chat-text-message{display:block;color:gray}.sender{position:absolute;right:0}.chat-text-block{width:auto!important;padding:10px}</style> <div class=\"chat\"> <iron-list items=\"[[data]]\" as=\"item\"> <template> <div class$=\"{{conditionalClass(item.sender)}} chat-text-block\"> <span class=\"chat-text-name\">[[item.sender]] </span> <span class=\"chat-text-message\">[[item.text]]</span> </div> </template> </iron-list> </div> </template> </dom-module> ");
 
-__webpack_require__(23);
-
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-__webpack_require__(20);
+__webpack_require__(21);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -11342,7 +11397,7 @@ _marshalBehavior: function (b) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -12154,7 +12209,7 @@ this._marshalBehaviors();
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -12348,7 +12403,7 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -12608,318 +12663,38 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var kernel_cofig_1 = __webpack_require__(8);
-var person = kernel_cofig_1.kernel.resolve("UserRepo");
-var ChatView;
-ChatView = Polymer({
-    is: 'chat-view',
-    conditionalClass: function (name) {
-        return name === "Jhon" ? 'sender' : '';
-    },
-    properties: {
-        prop: {
-            type: String,
-            value: 'Chat View'
-        },
-        user: {
-            type: String,
-            value: "Jhon"
-        },
-        data: {
-            type: Array,
-            value: person.messages.messages
-        }
-    },
-});
-
-
-/***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var type_binding_scope_1 = __webpack_require__(4);
-var lookup_1 = __webpack_require__(25);
-var Kernel = (function () {
-    function Kernel() {
-        this._bindingDictionary = new lookup_1.Lookup();
-    }
-    Kernel.prototype.bind = function (typeBinding) {
-        this._bindingDictionary.add(typeBinding.runtimeIdentifier, typeBinding);
-    };
-    Kernel.prototype.unbind = function (runtimeIdentifier) {
-        try {
-            this._bindingDictionary.remove(runtimeIdentifier);
-        }
-        catch (e) {
-            throw new Error("Could not resolve service " + runtimeIdentifier);
-        }
-    };
-    Kernel.prototype.unbindAll = function () {
-        this._bindingDictionary = new lookup_1.Lookup();
-    };
-    Kernel.prototype.resolve = function (runtimeIdentifier) {
-        var bindings;
-        if (this._bindingDictionary.hasKey(runtimeIdentifier)) {
-            bindings = this._bindingDictionary.get(runtimeIdentifier);
-        }
-        else {
-            return null;
-        }
-        var binding = bindings[0];
-        if ((binding.scope === type_binding_scope_1.TypeBindingScopeEnum.Singleton) && (binding.cache !== null)) {
-            return binding.cache;
-        }
-        else {
-            var result = this._injectDependencies(binding.implementationType);
-            binding.cache = result;
-            return result;
-        }
-    };
-    Kernel.prototype._getConstructorArguments = function (func) {
-        var typeIdentifiers = func.__INJECT || [];
-        return typeIdentifiers;
-    };
-    Kernel.prototype._injectDependencies = function (func) {
-        var args = this._getConstructorArguments(func);
-        if (args.length === 0) {
-            return new func();
-        }
-        else {
-            var injections = [], implementation = null;
-            for (var i = 0; i < args.length; i++) {
-                var service = args[i];
-                implementation = this.resolve(service);
-                injections.push(implementation);
-            }
-            return this._construct(func, injections);
-        }
-    };
-    Kernel.prototype._construct = function (constr, args) {
-        return new (Function.prototype.bind.apply(constr, [null].concat(args)));
-    };
-    return Kernel;
-}());
-exports.Kernel = Kernel;
+__webpack_require__(25);
+
+__webpack_require__(35);
+
+const RegisterHtmlTemplate = __webpack_require__(0);
+RegisterHtmlTemplate.register(" <dom-module id=\"message-view\"> <template> <style>.message{background-color:#b9eedc;height:70px}paper-input{margin:auto;padding:5px;float:left;width:90%}iron-icon{color:#7f7f7f}input-elements{margin-bottom:-10px}paper-fab{float:right;margin-top:10px;margin-right:10px;background-color:#7bb87b}</style> <div class=\"message\"> <div> <paper-input always-float-label=\"\" label=\"\" placeholder=\"New Message\"> </paper-input> <paper-fab mini=\"\" icon=\">\"></paper-fab> </div> </div> </template> </dom-module> ");
+
+__webpack_require__(13);
 
 
 /***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var KeyValuePair = (function () {
-    function KeyValuePair(key, value) {
-        this.key = key;
-        this.value = new Array();
-        this.value.push(value);
-    }
-    return KeyValuePair;
-}());
-var Lookup = (function () {
-    function Lookup() {
-        this._hashMap = new Array();
-    }
-    Lookup.prototype.getIndexByKey = function (key) {
-        var index = -1;
-        for (var i = 0; i < this._hashMap.length; i++) {
-            var keyValuePair = this._hashMap[i];
-            if (keyValuePair.key === key) {
-                index = i;
-            }
-        }
-        return index;
-    };
-    Lookup.prototype.add = function (key, value) {
-        if (key === null || key === undefined)
-            throw new Error("Argument Null");
-        if (value === null || value === undefined)
-            throw new Error("Argument Null");
-        var index = this.getIndexByKey(key);
-        if (index !== -1) {
-            var keyValuePair = this._hashMap[index];
-            keyValuePair.value.push(value);
-        }
-        else {
-            this._hashMap.push(new KeyValuePair(key, value));
-        }
-    };
-    Lookup.prototype.get = function (key) {
-        if (key === null || key === undefined)
-            throw new Error("Argument Null");
-        var index = this.getIndexByKey(key);
-        if (index !== -1) {
-            var keyValuePair = this._hashMap[index];
-            return keyValuePair.value;
-        }
-        else {
-            throw new Error("Key Not Found");
-        }
-    };
-    Lookup.prototype.remove = function (key) {
-        if (key === null || key === undefined)
-            throw new Error("Argument Null");
-        var index = this.getIndexByKey(key);
-        if (index !== -1) {
-            this._hashMap.splice(index, 1);
-        }
-        else {
-            throw new Error("Key Not Found");
-        }
-    };
-    Lookup.prototype.hasKey = function (key) {
-        if (key === null || key === undefined)
-            throw new Error("Argument Null");
-        var index = this.getIndexByKey(key);
-        if (index !== -1) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    };
-    return Lookup;
-}());
-exports.Lookup = Lookup;
-
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var type_binding_scope_1 = __webpack_require__(4);
-var TypeBinding = (function () {
-    function TypeBinding(runtimeIdentifier, implementationType, scopeType) {
-        this.runtimeIdentifier = runtimeIdentifier;
-        this.implementationType = implementationType;
-        this.cache = null;
-        if (typeof scopeType === "undefined") {
-            this.scope = type_binding_scope_1.TypeBindingScopeEnum.Transient;
-        }
-        else {
-            if (type_binding_scope_1.TypeBindingScopeEnum[scopeType]) {
-                this.scope = scopeType;
-            }
-            else {
-                var msg = "Invalid scope type " + scopeType;
-                throw new Error(msg);
-            }
-        }
-    }
-    return TypeBinding;
-}());
-exports.TypeBinding = TypeBinding;
-
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Inject = function () {
-    var typeIdentifiers = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        typeIdentifiers[_i] = arguments[_i];
-    }
-    return function (constructor) {
-        constructor.__INJECT = typeIdentifiers;
-        return constructor;
-    };
-};
-exports.Inject = Inject;
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = __webpack_require__(9);
-var Contacts_1 = __webpack_require__(11);
-var Messages_1 = __webpack_require__(10);
-var Person = (function () {
-    function Person(messages, contacts) {
-        this.contacts = contacts;
-        this.messages = messages;
-    }
-    Person.prototype.log = function () {
-        console.log("foobar");
-    };
-    Person.prototype.getContacts = function () {
-        return this.contacts;
-    };
-    Person.prototype.getMessages = function () {
-        return this.messages;
-    };
-    Person = __decorate([
-        inversify_1.Inject("MessagesRepo", "ContactsRepo"),
-        __metadata("design:paramtypes", [Messages_1.Messages,
-            Contacts_1.Contacts])
-    ], Person);
-    return Person;
-}());
-exports.Person = Person;
-
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-__webpack_require__(30);
-
-__webpack_require__(40);
-
-const RegisterHtmlTemplate = __webpack_require__(0);
-RegisterHtmlTemplate.register(" <dom-module id=\"message-view\"> <template> <style>.message{background-color:#b9eedc;height:70px}paper-input{margin:auto;padding:5px;float:left;width:90%}iron-icon{color:#7f7f7f}input-elements{margin-bottom:-10px}paper-fab{float:right;margin-top:10px;margin-right:10px;background-color:#7bb87b}</style> <div class=\"message\"> <div> <paper-input always-float-label=\"\" label=\"\" placeholder=\"New Message\"> </paper-input> <paper-fab mini=\"\" icon=\">\"></paper-fab> </div> </div> </template> </dom-module> ");
-
-__webpack_require__(47);
-
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
 
 __webpack_require__(1);
 
+__webpack_require__(26);
+
+__webpack_require__(27);
+
+__webpack_require__(30);
+
 __webpack_require__(31);
 
-__webpack_require__(32);
+__webpack_require__(33);
 
-__webpack_require__(35);
-
-__webpack_require__(36);
-
-__webpack_require__(38);
-
-__webpack_require__(39);
+__webpack_require__(34);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"paper-input\"> <template> <style>:host{display:block}input::-webkit-input-placeholder{color:var(--paper-input-container-color,--secondary-text-color)}input:-moz-placeholder{color:var(--paper-input-container-color,--secondary-text-color)}input::-moz-placeholder{color:var(--paper-input-container-color,--secondary-text-color)}input:-ms-input-placeholder{color:var(--paper-input-container-color,--secondary-text-color)}</style> <paper-input-container no-label-float=\"[[noLabelFloat]]\" always-float-label=\"[[_computeAlwaysFloatLabel(alwaysFloatLabel,placeholder)]]\" auto-validate$=\"[[autoValidate]]\" disabled$=\"[[disabled]]\" invalid=\"[[invalid]]\"> <content select=\"[prefix]\"></content> <label hidden$=\"[[!label]]\">[[label]]</label> <input is=\"iron-input\" id=\"input\" aria-labelledby$=\"[[_ariaLabelledBy]]\" aria-describedby$=\"[[_ariaDescribedBy]]\" disabled$=\"[[disabled]]\" bind-value=\"{{value}}\" invalid=\"{{invalid}}\" prevent-invalid-input=\"[[preventInvalidInput]]\" allowed-pattern=\"[[allowedPattern]]\" validator=\"[[validator]]\" type$=\"[[type]]\" pattern$=\"[[pattern]]\" required$=\"[[required]]\" autocomplete$=\"[[autocomplete]]\" autofocus$=\"[[autofocus]]\" inputmode$=\"[[inputmode]]\" minlength$=\"[[minlength]]\" maxlength$=\"[[maxlength]]\" min$=\"[[min]]\" max$=\"[[max]]\" step$=\"[[step]]\" name$=\"[[name]]\" placeholder$=\"[[placeholder]]\" readonly$=\"[[readonly]]\" list$=\"[[list]]\" size$=\"[[size]]\" autocapitalize$=\"[[autocapitalize]]\" autocorrect$=\"[[autocorrect]]\" on-change=\"_onChange\" tabindex$=\"[[tabindex]]\" autosave$=\"[[autosave]]\" results$=\"[[results]]\" accept$=\"[[accept]]\" multiple$=\"[[multiple]]\"> <content select=\"[suffix]\"></content> <template is=\"dom-if\" if=\"[[errorMessage]]\"> <paper-input-error>[[errorMessage]]</paper-input-error> </template> <template is=\"dom-if\" if=\"[[charCounter]]\"> <paper-input-char-counter></paper-input-char-counter> </template> </paper-input-container> </template> </dom-module> ");
@@ -12937,7 +12712,7 @@ RegisterHtmlTemplate.register(" <dom-module id=\"paper-input\"> <template> <styl
 
 
 /***/ }),
-/* 31 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -13023,15 +12798,15 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 32 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(33);
+__webpack_require__(28);
 
-__webpack_require__(34);
+__webpack_require__(29);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -13336,7 +13111,7 @@ is separate from validation, and `allowed-pattern` does not affect how the input
 
 
 /***/ }),
-/* 33 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -13413,13 +13188,13 @@ RegisterHtmlTemplate.register(" <dom-module id=\"iron-a11y-announcer\"> <templat
 
 
 /***/ }),
-/* 34 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(12);
+__webpack_require__(8);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -13563,7 +13338,7 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 35 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -13571,7 +13346,7 @@ __webpack_require__(1);
 
 __webpack_require__(2);
 
-__webpack_require__(13);
+__webpack_require__(9);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -14067,15 +13842,15 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 36 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(5);
+__webpack_require__(4);
 
-__webpack_require__(14);
+__webpack_require__(10);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"paper-input-char-counter\"> <template> <style>:host{display:inline-block;float:right;@apply(--paper-font-caption);@apply(--paper-input-char-counter);}:host-context([dir=rtl]){float:left}</style> <span>[[_charCounterStr]]</span> </template> </dom-module> ");
@@ -14115,7 +13890,7 @@ RegisterHtmlTemplate.register(" <dom-module id=\"paper-input-char-counter\"> <te
 
 
 /***/ }),
-/* 37 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -14124,19 +13899,19 @@ RegisterHtmlTemplate.toBody("<link rel=\"stylesheet\" type=\"text/css\" href=\"h
 
 
 /***/ }),
-/* 38 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(6);
+__webpack_require__(5);
 
 __webpack_require__(3);
 
-__webpack_require__(15);
+__webpack_require__(11);
 
-__webpack_require__(5);
+__webpack_require__(4);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"paper-input-container\"> <template> <style>:host{display:block;padding:8px 0;@apply(--paper-input-container);}:host[inline]{display:inline-block}:host([disabled]){pointer-events:none;opacity:.33;@apply(--paper-input-container-disabled);}.floated-label-placeholder{@apply(--paper-font-caption);}.underline{position:relative}.focused-line{@apply(--layout-fit);background:var(--paper-input-container-focus-color,--default-primary-color);height:2px;-webkit-transform-origin:center center;transform-origin:center center;-webkit-transform:scale3d(0,1,1);transform:scale3d(0,1,1);@apply(--paper-input-container-underline-focus);}.underline.is-highlighted .focused-line{-webkit-transform:none;transform:none;-webkit-transition:-webkit-transform .25s;transition:transform .25s;@apply(--paper-transition-easing);}.underline.is-invalid .focused-line{background:var(--paper-input-container-invalid-color,--google-red-500);-webkit-transform:none;transform:none;-webkit-transition:-webkit-transform .25s;transition:transform .25s;@apply(--paper-transition-easing);}.unfocused-line{@apply(--layout-fit);height:1px;background:var(--paper-input-container-color,--secondary-text-color);@apply(--paper-input-container-underline);}:host([disabled]) .unfocused-line{border-bottom:1px dashed;border-color:var(--paper-input-container-color,--secondary-text-color);background:0 0;@apply(--paper-input-container-underline-disabled);}.label-and-input-container{@apply(--layout-flex-auto);@apply(--layout-relative);width:100%;max-width:100%}.input-content{@apply(--layout-horizontal);@apply(--layout-center);position:relative}.input-content ::content .paper-input-label,.input-content ::content label{position:absolute;top:0;right:0;left:0;width:100%;font:inherit;color:var(--paper-input-container-color,--secondary-text-color);@apply(--paper-font-common-nowrap);@apply(--paper-font-subhead);@apply(--paper-input-container-label);}.input-content.label-is-floating ::content .paper-input-label,.input-content.label-is-floating ::content label{-webkit-transform:translateY(-75%) scale(.75);transform:translateY(-75%) scale(.75);-webkit-transition:-webkit-transform .25s,width .25s;transition:transform .25s,width .25s;-webkit-transform-origin:left top;transform-origin:left top;width:133%;@apply(--paper-transition-easing);@apply(--paper-input-container-label-floating);}:host-context([dir=rtl]) .input-content.label-is-floating ::content .paper-input-label,:host-context([dir=rtl]) .input-content.label-is-floating ::content label{width:100%;-webkit-transform-origin:right top;transform-origin:right top}.input-content.label-is-highlighted ::content .paper-input-label,.input-content.label-is-highlighted ::content label{color:var(--paper-input-container-focus-color,--default-primary-color);@apply(--paper-input-container-label-focus);}.input-content.is-invalid ::content .paper-input-label,.input-content.is-invalid ::content label{color:var(--paper-input-container-invalid-color,--google-red-500)}.input-content.label-is-hidden ::content .paper-input-label,.input-content.label-is-hidden ::content label{visibility:hidden}.input-content ::content .paper-input-input,.input-content ::content input,.input-content ::content iron-autogrow-textarea,.input-content ::content textarea{position:relative;outline:0;box-shadow:none;padding:0;width:100%;max-width:100%;background:0 0;border:none;color:var(--paper-input-container-input-color,--primary-text-color);-webkit-appearance:none;text-align:inherit;@apply(--paper-font-subhead);@apply(--paper-input-container-input);}::content [prefix]{@apply(--paper-font-subhead);@apply(--paper-input-prefix);@apply(--layout-flex-none);}::content [suffix]{@apply(--paper-font-subhead);@apply(--paper-input-suffix);@apply(--layout-flex-none);}.input-content ::content input{min-width:0}.input-content ::content textarea{resize:none}.add-on-content{position:relative}.add-on-content.is-invalid ::content *{color:var(--paper-input-container-invalid-color,--google-red-500)}.add-on-content.is-highlighted ::content *{color:var(--paper-input-container-focus-color,--default-primary-color)}</style> <template is=\"dom-if\" if=\"[[!noLabelFloat]]\"> <div class=\"floated-label-placeholder\">&nbsp;</div> </template> <div class$=\"[[_computeInputContentClass(noLabelFloat,alwaysFloatLabel,focused,invalid,_inputHasContent)]]\"> <content select=\"[prefix]\" id=\"prefix\"></content> <div class=\"label-and-input-container\" id=\"labelAndInputContainer\"> <content select=\":not([add-on]):not([prefix]):not([suffix])\"></content> </div> <content select=\"[suffix]\"></content> </div> <div class$=\"[[_computeUnderlineClass(focused,invalid)]]\"> <div class=\"unfocused-line\"></div> <div class=\"focused-line\"></div> </div> <div class$=\"[[_computeAddOnContentClass(focused,invalid)]]\"> <content id=\"addOnContent\" select=\"[add-on]\"></content> </div> </template> </dom-module> ");
@@ -14424,7 +14199,7 @@ RegisterHtmlTemplate.register(" <dom-module id=\"paper-input-container\"> <templ
 
 
 /***/ }),
-/* 39 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -14432,9 +14207,9 @@ __webpack_require__(1);
 
 __webpack_require__(3);
 
-__webpack_require__(5);
+__webpack_require__(4);
 
-__webpack_require__(14);
+__webpack_require__(10);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"paper-input-error\"> <template> <style>:host{display:inline-block;visibility:hidden;color:var(--paper-input-container-invalid-color,--google-red-500);@apply(--paper-font-caption);@apply(--paper-input-error);position:absolute;left:0;right:0}:host([invalid]){visibility:visible}</style> <content></content> </template> </dom-module> ");
@@ -14466,25 +14241,25 @@ RegisterHtmlTemplate.register(" <dom-module id=\"paper-input-error\"> <template>
 
 
 /***/ }),
-/* 40 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(6);
+__webpack_require__(5);
 
-__webpack_require__(41);
+__webpack_require__(36);
 
-__webpack_require__(42);
+__webpack_require__(37);
 
-__webpack_require__(45);
+__webpack_require__(40);
 
-__webpack_require__(16);
+__webpack_require__(12);
 
 __webpack_require__(3);
 
-__webpack_require__(15);
+__webpack_require__(11);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"paper-fab\"> <template strip-whitespace=\"\"> <style include=\"paper-material-shared-styles\">:host{display:inline-block;position:relative;outline:0;-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;user-select:none;cursor:pointer;box-sizing:border-box;min-width:0;width:56px;height:56px;background:var(--paper-fab-background,--accent-color);color:var(--text-primary-color);border-radius:50%;padding:16px;z-index:0;@apply(--layout-vertical);@apply(--layout-center-center);@apply(--paper-fab);}:host([mini]){width:40px;height:40px;padding:8px;@apply(--paper-fab-mini);}:host([disabled]){color:var(--paper-fab-disabled-text,--paper-grey-500);background:var(--paper-fab-disabled-background,--paper-grey-300);@apply(--paper-fab-disabled);}iron-icon{@apply(--paper-fab-iron-icon);}:host(.keyboard-focus){background:var(--paper-fab-keyboard-focus-background,--paper-pink-900)}</style> <iron-icon id=\"icon\" src=\"[[src]]\" icon=\"[[icon]]\"></iron-icon> </template> </dom-module> ");
@@ -14543,15 +14318,15 @@ RegisterHtmlTemplate.register(" <dom-module id=\"paper-fab\"> <template strip-wh
 
 
 /***/ }),
-/* 41 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(12);
+__webpack_require__(8);
 
-__webpack_require__(6);
+__webpack_require__(5);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"iron-icon\"> <template> <style>:host{@apply(--layout-inline);@apply(--layout-center-center);position:relative;vertical-align:middle;fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);width:var(--iron-icon-width,24px);height:var(--iron-icon-height,24px);@apply(--iron-icon);}</style> </template> </dom-module> ");
@@ -14663,15 +14438,15 @@ RegisterHtmlTemplate.register(" <dom-module id=\"iron-icon\"> <template> <style>
 
 
 /***/ }),
-/* 42 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(43);
+__webpack_require__(38);
 
-__webpack_require__(44);
+__webpack_require__(39);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -14762,7 +14537,7 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 43 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -14770,7 +14545,7 @@ __webpack_require__(1);
 
 __webpack_require__(2);
 
-__webpack_require__(13);
+__webpack_require__(9);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -15000,13 +14775,13 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 44 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 __webpack_require__(1);
 
-__webpack_require__(16);
+__webpack_require__(12);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.toBody(" ");
@@ -15127,18 +14902,18 @@ RegisterHtmlTemplate.toBody(" ");
 
 
 /***/ }),
-/* 45 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-__webpack_require__(46);
+__webpack_require__(41);
 
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"paper-material-shared-styles\"> <template> <style>:host{display:block;position:relative}:host([elevation=\"1\"]){@apply(--shadow-elevation-2dp);}:host([elevation=\"2\"]){@apply(--shadow-elevation-4dp);}:host([elevation=\"3\"]){@apply(--shadow-elevation-6dp);}:host([elevation=\"4\"]){@apply(--shadow-elevation-8dp);}:host([elevation=\"5\"]){@apply(--shadow-elevation-16dp);}</style> </template> </dom-module> ");
 
 
 /***/ }),
-/* 46 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -15149,23 +14924,7 @@ RegisterHtmlTemplate.toBody(" <style is=\"custom-style\">:root{--shadow-transiti
 
 
 /***/ }),
-/* 47 */
-/***/ (function(module, exports) {
-
-var MessageView;
-MessageView = Polymer({
-    is: 'message-view',
-    properties: {
-        prop: {
-            type: String,
-            value: 'Message View'
-        }
-    },
-});
-
-
-/***/ }),
-/* 48 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -15174,7 +14933,251 @@ __webpack_require__(7);
 const RegisterHtmlTemplate = __webpack_require__(0);
 RegisterHtmlTemplate.register(" <dom-module id=\"thread-view\"> <template> <style>.sidebar{background-color:rgba(240,239,238,.959);height:100%}.sidebar-text{text-indent:15px;color:#000;font-size:24px;height:55px;padding:5px}.selected{background-color:#d3d3d3}</style> <div class=\"sidebar\"> <iron-list items=\"[[data]]\" as=\"item\"> <template> <div class$=\"[[conditionalClass(item.name)]] sidebar-text\"> [[item.name]] </div> </template> </iron-list> </div> </template> </dom-module> ");
 
-__webpack_require__(49);
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+const RegisterHtmlTemplate = __webpack_require__(0);
+RegisterHtmlTemplate.register("<dom-module id=\"custom-header\"> <template> <style>.navbar{width:100%;height:40px;min-height:40px;background-color:#44856f;margin:0}.navbar-text{margin:0;color:#fff;padding-left:2%}</style> <div class=\"navbar\"><h2 class=\"navbar-text\">[[prop]]</h2></div> </template> </dom-module> ");
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var kernel_cofig_1 = __webpack_require__(14);
+var person = kernel_cofig_1.kernel.resolve("User");
+var ChatView;
+ChatView = Polymer({
+    is: 'chat-view',
+    conditionalClass: function (name) {
+        return name === "Jhon" ? 'sender' : '';
+    },
+    properties: {
+        prop: {
+            type: String,
+            value: 'Chat View'
+        },
+        user: {
+            type: String,
+            value: "Jhon"
+        },
+        data: {
+            type: Array,
+            value: person.message.getAll()
+        }
+    },
+});
+
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var type_binding_scope_1 = __webpack_require__(6);
+var lookup_1 = __webpack_require__(46);
+var Kernel = (function () {
+    function Kernel() {
+        this._bindingDictionary = new lookup_1.Lookup();
+    }
+    Kernel.prototype.bind = function (typeBinding) {
+        this._bindingDictionary.add(typeBinding.runtimeIdentifier, typeBinding);
+    };
+    Kernel.prototype.unbind = function (runtimeIdentifier) {
+        try {
+            this._bindingDictionary.remove(runtimeIdentifier);
+        }
+        catch (e) {
+            throw new Error("Could not resolve service " + runtimeIdentifier);
+        }
+    };
+    Kernel.prototype.unbindAll = function () {
+        this._bindingDictionary = new lookup_1.Lookup();
+    };
+    Kernel.prototype.resolve = function (runtimeIdentifier) {
+        var bindings;
+        if (this._bindingDictionary.hasKey(runtimeIdentifier)) {
+            bindings = this._bindingDictionary.get(runtimeIdentifier);
+        }
+        else {
+            return null;
+        }
+        var binding = bindings[0];
+        if ((binding.scope === type_binding_scope_1.TypeBindingScopeEnum.Singleton) && (binding.cache !== null)) {
+            return binding.cache;
+        }
+        else {
+            var result = this._injectDependencies(binding.implementationType);
+            binding.cache = result;
+            return result;
+        }
+    };
+    Kernel.prototype._getConstructorArguments = function (func) {
+        var typeIdentifiers = func.__INJECT || [];
+        return typeIdentifiers;
+    };
+    Kernel.prototype._injectDependencies = function (func) {
+        var args = this._getConstructorArguments(func);
+        if (args.length === 0) {
+            return new func();
+        }
+        else {
+            var injections = [], implementation = null;
+            for (var i = 0; i < args.length; i++) {
+                var service = args[i];
+                implementation = this.resolve(service);
+                injections.push(implementation);
+            }
+            return this._construct(func, injections);
+        }
+    };
+    Kernel.prototype._construct = function (constr, args) {
+        return new (Function.prototype.bind.apply(constr, [null].concat(args)));
+    };
+    return Kernel;
+}());
+exports.Kernel = Kernel;
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var KeyValuePair = (function () {
+    function KeyValuePair(key, value) {
+        this.key = key;
+        this.value = new Array();
+        this.value.push(value);
+    }
+    return KeyValuePair;
+}());
+var Lookup = (function () {
+    function Lookup() {
+        this._hashMap = new Array();
+    }
+    Lookup.prototype.getIndexByKey = function (key) {
+        var index = -1;
+        for (var i = 0; i < this._hashMap.length; i++) {
+            var keyValuePair = this._hashMap[i];
+            if (keyValuePair.key === key) {
+                index = i;
+            }
+        }
+        return index;
+    };
+    Lookup.prototype.add = function (key, value) {
+        if (key === null || key === undefined)
+            throw new Error("Argument Null");
+        if (value === null || value === undefined)
+            throw new Error("Argument Null");
+        var index = this.getIndexByKey(key);
+        if (index !== -1) {
+            var keyValuePair = this._hashMap[index];
+            keyValuePair.value.push(value);
+        }
+        else {
+            this._hashMap.push(new KeyValuePair(key, value));
+        }
+    };
+    Lookup.prototype.get = function (key) {
+        if (key === null || key === undefined)
+            throw new Error("Argument Null");
+        var index = this.getIndexByKey(key);
+        if (index !== -1) {
+            var keyValuePair = this._hashMap[index];
+            return keyValuePair.value;
+        }
+        else {
+            throw new Error("Key Not Found");
+        }
+    };
+    Lookup.prototype.remove = function (key) {
+        if (key === null || key === undefined)
+            throw new Error("Argument Null");
+        var index = this.getIndexByKey(key);
+        if (index !== -1) {
+            this._hashMap.splice(index, 1);
+        }
+        else {
+            throw new Error("Key Not Found");
+        }
+    };
+    Lookup.prototype.hasKey = function (key) {
+        if (key === null || key === undefined)
+            throw new Error("Argument Null");
+        var index = this.getIndexByKey(key);
+        if (index !== -1) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    return Lookup;
+}());
+exports.Lookup = Lookup;
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var type_binding_scope_1 = __webpack_require__(6);
+var TypeBinding = (function () {
+    function TypeBinding(runtimeIdentifier, implementationType, scopeType) {
+        this.runtimeIdentifier = runtimeIdentifier;
+        this.implementationType = implementationType;
+        this.cache = null;
+        if (typeof scopeType === "undefined") {
+            this.scope = type_binding_scope_1.TypeBindingScopeEnum.Transient;
+        }
+        else {
+            if (type_binding_scope_1.TypeBindingScopeEnum[scopeType]) {
+                this.scope = scopeType;
+            }
+            else {
+                var msg = "Invalid scope type " + scopeType;
+                throw new Error(msg);
+            }
+        }
+    }
+    return TypeBinding;
+}());
+exports.TypeBinding = TypeBinding;
+
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Inject = function () {
+    var typeIdentifiers = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        typeIdentifiers[_i] = arguments[_i];
+    }
+    return function (constructor) {
+        constructor.__INJECT = typeIdentifiers;
+        return constructor;
+    };
+};
+exports.Inject = Inject;
 
 
 /***/ }),
@@ -15184,8 +15187,80 @@ __webpack_require__(49);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var kernel_cofig_1 = __webpack_require__(8);
-var person = kernel_cofig_1.kernel.resolve("UserRepo");
+var Message = (function () {
+    function Message(id, sender, text) {
+        this.id = id;
+        this.sender = sender;
+        this.text = text;
+    }
+    return Message;
+}());
+exports.Message = Message;
+
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Contact = (function () {
+    function Contact(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    Contact.prototype.toString = function () {
+        return this.name + " -- " + this.phone;
+    };
+    return Contact;
+}());
+exports.Contact = Contact;
+
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var inversify_1 = __webpack_require__(15);
+var messages_repo_1 = __webpack_require__(16);
+var contacts_repo_1 = __webpack_require__(17);
+var User = (function () {
+    function User(message, contact) {
+        this.contact = contact;
+        this.message = message;
+    }
+    User = __decorate([
+        inversify_1.Inject("MessageRepoImpl", "ContactRepoImpl"),
+        __metadata("design:paramtypes", [messages_repo_1.MessageRepoImpl,
+            contacts_repo_1.ContactRepoImpl])
+    ], User);
+    return User;
+}());
+exports.User = User;
+
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var kernel_cofig_1 = __webpack_require__(14);
+var person = kernel_cofig_1.kernel.resolve("User");
 var ThreadView = Polymer({
     is: 'thread-view',
     conditionalClass: function (name) {
@@ -15198,25 +15273,14 @@ var ThreadView = Polymer({
         },
         data: {
             type: Array,
-            value: person.contacts.contacts
+            value: person.contact.getAll()
         }
     },
 });
 
 
 /***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-const RegisterHtmlTemplate = __webpack_require__(0);
-RegisterHtmlTemplate.register("<dom-module id=\"custom-header\"> <template> <style>.navbar{width:100%;height:40px;min-height:40px;background-color:#44856f;margin:0}.navbar-text{margin:0;color:#fff;padding-left:2%}</style> <div class=\"navbar\"><h2 class=\"navbar-text\">[[prop]]</h2></div> </template> </dom-module> ");
-
-__webpack_require__(51);
-
-
-/***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports) {
 
 var Header;
@@ -15233,31 +15297,4 @@ Header = Polymer({
 
 /***/ })
 /******/ ]);</script>
-</head>
-
-<body class="body">
-
-  <div>
-
-    <custom-header></custom-header>
-    <div style="display: inline-flex;width: 100%;height: calc(100vh - 43px);">
-      <div style="width: 30%;">
-
-        <thread-view></thread-view>
-
-      </div>
-      <div style="width: 70%;">
-
-        <chat-view></chat-view>
-        <message-view></message-view>
-
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
 </body></html>

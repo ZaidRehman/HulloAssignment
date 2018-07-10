@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var kernel_cofig_1 = require("../kernel.cofig");
-var person = kernel_cofig_1.kernel.resolve("UserRepo");
+var person = kernel_cofig_1.kernel.resolve("User");
 var ThreadView = Polymer({
     is: 'thread-view',
     conditionalClass: function (name) {
@@ -14,7 +14,7 @@ var ThreadView = Polymer({
         },
         data: {
             type: Array,
-            value: person.contacts.contacts
+            value: person.contact.getAll()
         }
     },
 });

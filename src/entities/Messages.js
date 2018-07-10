@@ -1,37 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Messages = (function () {
-    function Messages() {
-        this.sender = {
-            name: "Jhon",
-            sender: true
-        };
-        this.receiver = {
-            name: "Peter",
-            sender: false
-        };
-        this.messages = [{
-                time: "",
-                text: "Hi!!!",
-                sender: this.sender.name,
-                receiver: this.receiver.name
-            },
-            {
-                time: "",
-                text: "Hey, How are you",
-                sender: this.receiver.name,
-                receiver: this.sender.name
-            },
-            {
-                time: "",
-                text: "I am fine!!",
-                sender: this.sender.name,
-                receiver: this.receiver.name
-            }];
+var Message = (function () {
+    function Message(id, sender, text) {
+        this.id = id;
+        this.sender = sender;
+        this.text = text;
     }
-    Messages.prototype.log = function () {
-        console.log("foo");
-    };
-    return Messages;
+    return Message;
 }());
-exports.Messages = Messages;
+exports.Message = Message;

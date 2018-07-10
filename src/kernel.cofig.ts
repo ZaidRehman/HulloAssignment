@@ -1,19 +1,19 @@
 import { TypeBinding, Kernel } from "./../inversify/inversify";
 
 //Repos
-import { MessagesRepo } from './repositories/MessagesRepo'
-import { ContactsRepo } from './repositories/ContactsRepo'
-import { UserRepo } from './repositories/UserRepo'
+import { MessageRepoImpl } from './repositories/messages-repo'
+import { ContactRepoImpl } from './repositories/contacts-repo'
+import { UserRepoImpl } from './repositories/user-repo'
 
 //entities
-import { Messages } from './entities/Messages'
-import { Contacts } from './entities/Contacts'
-import { Person } from './entities/User'
+import { Message } from './entities/messages'
+import { Contact } from './entities/contacts'
+import { User } from './entities/user'
 
 var kernel = new Kernel();
 
-kernel.bind(new TypeBinding<MessagesRepo>("MessagesRepo", Messages));
-kernel.bind(new TypeBinding<ContactsRepo>("ContactsRepo", Contacts));
-kernel.bind(new TypeBinding<UserRepo>("UserRepo", Person));
+kernel.bind(new TypeBinding<MessageRepoImpl>("MessageRepoImpl", MessageRepoImpl));
+kernel.bind(new TypeBinding<ContactRepoImpl>("ContactRepoImpl", ContactRepoImpl));
+kernel.bind(new TypeBinding<User>("User", User));
 
 export { kernel } 

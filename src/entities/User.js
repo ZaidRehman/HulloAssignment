@@ -9,28 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var inversify_1 = require("./../../inversify/inversify");
-var Contacts_1 = require("./../entities/Contacts");
-var Messages_1 = require("./../entities/Messages");
-var Person = (function () {
-    function Person(messages, contacts) {
-        this.contacts = contacts;
-        this.messages = messages;
+var inversify_1 = require("../../inversify/inversify");
+var messages_repo_1 = require("../repositories/messages-repo");
+var contacts_repo_1 = require("../repositories/contacts-repo");
+var User = (function () {
+    function User(message, contact) {
+        this.contact = contact;
+        this.message = message;
     }
-    Person.prototype.log = function () {
-        console.log("foobar");
-    };
-    Person.prototype.getContacts = function () {
-        return this.contacts;
-    };
-    Person.prototype.getMessages = function () {
-        return this.messages;
-    };
-    Person = __decorate([
-        inversify_1.Inject("MessagesRepo", "ContactsRepo"),
-        __metadata("design:paramtypes", [Messages_1.Messages,
-            Contacts_1.Contacts])
-    ], Person);
-    return Person;
+    User = __decorate([
+        inversify_1.Inject("MessageRepoImpl", "ContactRepoImpl"),
+        __metadata("design:paramtypes", [messages_repo_1.MessageRepoImpl,
+            contacts_repo_1.ContactRepoImpl])
+    ], User);
+    return User;
 }());
-exports.Person = Person;
+exports.User = User;

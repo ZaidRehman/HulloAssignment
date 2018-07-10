@@ -1,8 +1,8 @@
 ﻿/// <reference path="../../bower_components/polymer-ts/polymer-ts.d.ts" />
 
 import { kernel } from "../kernel.cofig";
-import { UserRepo } from "../repositories/UserRepo";
-var person = kernel.resolve<UserRepo>("UserRepo");
+import { User } from "../entities/user";
+var person = kernel.resolve<User>("User");
 
 var ChatView
 ChatView = Polymer(<any>
@@ -23,7 +23,7 @@ ChatView = Polymer(<any>
       },
       data: {
         type: Array,
-        value: person.messages.messages
+        value: person.message.getAll()
       }
     },
 

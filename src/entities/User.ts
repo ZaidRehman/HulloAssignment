@@ -1,31 +1,21 @@
-import { Inject } from "./../../inversify/inversify";
-import { UserRepo } from './../repositories/UserRepo';
-import { Contacts } from './../entities/Contacts';
-import { Messages } from './../entities/Messages';
+import { Inject } from '../../inversify/inversify'
+import { MessageRepoImpl } from '../repositories/messages-repo'
+import { ContactRepoImpl } from '../repositories/contacts-repo'
 
-@Inject("MessagesRepo", "ContactsRepo")
-export class Person implements UserRepo {
+
+
+@Inject("MessageRepoImpl", "ContactRepoImpl")
+export class User {
 
     name: String
-    contacts: Contacts
-    messages: Messages
+    contact: ContactRepoImpl
+    message: MessageRepoImpl
 
     public constructor(
-        messages: Messages,
-        contacts: Contacts
+        message: MessageRepoImpl,
+        contact: ContactRepoImpl
     ) {
-        this.contacts = contacts;
-        this.messages = messages;
+        this.contact = contact;
+        this.message = message;
     }
-    public log() {
-        console.log("foobar");
-    }
-
-    getContacts() {
-        return this.contacts
-    }
-    getMessages() {
-        return this.messages
-    }
-
 }

@@ -1,15 +1,14 @@
-import { ContactsRepo } from "./../repositories/ContactsRepo";
+export class Contact {
+    public name: string;
+    public id: string;
+    public phone: string;
 
-export class Contacts implements ContactsRepo {
+    constructor(id: string, name: string) {
+        this.id = id;
+        this.name = name;
+    }
 
-    contacts = [
-        { name: "Mike" },
-        { name: "Molly" },
-        { name: "Peter" },
-        { name: "Mesut" },
-        { name: "Ozil" }
-    ]
-    public log() {
-        console.log("bar");
+    toString() {
+        return this.name + " -- " + this.phone;
     }
 }

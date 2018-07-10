@@ -16,37 +16,28 @@
 
 
   <!-- custom elements -->
-  <!-- <link rel="import" href="scripts/elements/app-main.html">
-   <link rel="import" href="scripts/elements/thread-view.html">
-   <link rel="import" href="scripts/elements/chat-view.html">
-   <link rel="import" href="scripts/elements/message-view.html">  -->
+  <!-- <link rel="import" href="src/elements/header1.html">
+   <link rel="import" href="src/elements/thread-view.html">
+   <link rel="import" href="src/elements/chat-view.html">
+   <link rel="import" href="src/elements/message-view.html">  -->
 
-  <script src='dist/bundle.js'></script>
-</head>
-
-<body class="body">
-
-  <div>
-
-    <custom-header></custom-header>
-    <div style="display: inline-flex;width: 100%;height: calc(100vh - 43px);">
-      <div style="width: 30%;">
-
-        <thread-view></thread-view>
-
-      </div>
-      <div style="width: 70%;">
-
-        <chat-view></chat-view>
-        <message-view></message-view>
-
+  </head>
+  
+  <body class="body">
+    
+    <div>
+      
+      <custom-header></custom-header>
+      <div style="display: inline-flex;width: 100%;height: calc(100vh - 43px);">
+        <div style="width: 30%;">
+          <thread-view></thread-view>
+        </div>
+        <div style="width: 70%;">
+          <chat-view></chat-view>
+          <message-view></message-view>
+        </div>
       </div>
     </div>
-  </div>
-
-
-
-
-</body>
-
+  </body>
+  <script src='dist/bundle.js'></script>
 </html>

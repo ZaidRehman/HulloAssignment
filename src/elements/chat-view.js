@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var kernel_cofig_1 = require("../kernel.cofig");
-var person = kernel_cofig_1.kernel.resolve("UserRepo");
+var person = kernel_cofig_1.kernel.resolve("User");
 var ChatView;
 ChatView = Polymer({
     is: 'chat-view',
@@ -19,7 +19,7 @@ ChatView = Polymer({
         },
         data: {
             type: Array,
-            value: person.messages.messages
+            value: person.message.getAll()
         }
     },
 });

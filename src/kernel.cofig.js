@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var inversify_1 = require("./../inversify/inversify");
-var Messages_1 = require("./entities/Messages");
-var Contacts_1 = require("./entities/Contacts");
-var User_1 = require("./entities/User");
+var messages_repo_1 = require("./repositories/messages-repo");
+var contacts_repo_1 = require("./repositories/contacts-repo");
+var user_1 = require("./entities/user");
 var kernel = new inversify_1.Kernel();
 exports.kernel = kernel;
-kernel.bind(new inversify_1.TypeBinding("MessagesRepo", Messages_1.Messages));
-kernel.bind(new inversify_1.TypeBinding("ContactsRepo", Contacts_1.Contacts));
-kernel.bind(new inversify_1.TypeBinding("UserRepo", User_1.Person));
+kernel.bind(new inversify_1.TypeBinding("MessageRepoImpl", messages_repo_1.MessageRepoImpl));
+kernel.bind(new inversify_1.TypeBinding("ContactRepoImpl", contacts_repo_1.ContactRepoImpl));
+kernel.bind(new inversify_1.TypeBinding("User", user_1.User));

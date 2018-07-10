@@ -1,7 +1,8 @@
 ﻿
 import { kernel } from "../kernel.cofig";
-import { UserRepo } from "../repositories/UserRepo";
-var person = kernel.resolve<UserRepo>("UserRepo");
+import { User } from "../entities/user";
+var person = kernel.resolve<User>("User");
+
 
 var ThreadView = Polymer(<any>
     {
@@ -17,7 +18,7 @@ var ThreadView = Polymer(<any>
             },
             data: {
                 type: Array,
-                value: person.contacts.contacts
+                value: person.contact.getAll()
             }
         },
 

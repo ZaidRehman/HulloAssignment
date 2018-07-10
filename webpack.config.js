@@ -1,7 +1,8 @@
 var path = require('path')
+var glob = require("glob");
 
 module.exports = {
-  entry: path.resolve(__dirname, 'index.js'),
+  entry: path.join(__dirname, 'index.js'),//glob.sync('./src/**/*.js'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
