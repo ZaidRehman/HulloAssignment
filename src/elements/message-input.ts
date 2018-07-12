@@ -3,7 +3,7 @@ var MessageView
 
 MessageView = Polymer(<any>
 {
-      is: 'message-view',
+      is: 'message-input',
 
       properties:
       {

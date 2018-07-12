@@ -1,8 +1,18 @@
+//html
 import './src/elements/chat-view.html'
-import './src/elements/message-view.html'
-import './src/elements/thread-view.html'
-import './src/elements/header1.html'
+import './src/elements/chat-header.html'
+import './src/elements/chat-body.html'
+import './src/elements/contact-thread.html'
+import './src/elements/message-body.html'
+import './src/elements/message-thread.html'
+import './src/elements/message-input.html'
+
+
+//js
 import './src/elements/chat-view'
-import './src/elements/message-view'
-import './src/elements/thread-view'
-import './src/elements/header1'
+import './src/elements/chat-header'
+import './src/elements/chat-body'
+import './src/elements/contact-thread'
+import './src/elements/message-body'
+import './src/elements/message-thread'
+import './src/elements/message-input'

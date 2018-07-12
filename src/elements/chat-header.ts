@@ -2,16 +2,16 @@
 var Header
 
 Header = Polymer(<any>
-{
-      is: 'custom-header',
+  {
+    is: 'chat-header',
 
-      properties:
-      {
-        prop: {
+    properties:
+    {
+      name: {
         type: String,
         value: 'Peter'
-        }
+      }
     },
 
-   });
+  });
 

@@ -1,0 +1,47 @@
+﻿<link rel="import" href="../../bower_components/iron-list/iron-list.html">
+
+<dom-module id="message-thread">
+  <template>
+    <style>
+      .chat{
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -70px; 
+      }
+      .chat-text-name{
+        display: block;
+        width: auto !important;
+        font-size: 20px;
+      }
+      .chat-text-message{
+        display: block;
+        color: gray;
+      }
+      .sender{
+        position: absolute;
+        right: 0%;
+        
+      }
+
+      .chat-text-block{
+        width: auto !important;
+        padding: 10px;
+      }
+
+    </style>
+    <div class="chat">
+        <iron-list items="[[data]]" as="item">
+            <template>
+              <div class$="{{conditionalClass(item.sender)}} chat-text-block" >
+                  
+                <span class="chat-text-name">[[item.sender]] </span>
+                <span class="chat-text-message">[[item.text]]</span>
+                  
+              </div>
+            </template>
+          </iron-list>
+    </div>
+  </template>
+</dom-module>
+

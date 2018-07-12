@@ -4,9 +4,9 @@ import { User } from "../entities/user";
 var person = kernel.resolve<User>("User");
 
 
-var ThreadView = Polymer(<any>
+var ContactThread = Polymer(<any>
     {
-        is: 'thread-view',
+        is: 'contact-thread',
         conditionalClass: function (name: String) {
             return name === "Peter" ? 'selected' : ''
         },
@@ -14,7 +14,7 @@ var ThreadView = Polymer(<any>
         {
             prop: {
                 type: String,
-                value: 'Thread View'
+                value: 'Contact Thread'
             },
             data: {
                 type: Array,
