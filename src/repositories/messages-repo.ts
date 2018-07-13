@@ -1,4 +1,4 @@
-import { Message } from "../entities/messages";
+import { Message } from "../entities/Messages";
 
 export interface IMessagesRepo {
     save(message: Message): Message;

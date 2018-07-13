@@ -1,15 +1,26 @@
+<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+
 <dom-module id='chat-body'>
     <template>
         <style>
-            .chat-body{
+            .chat-body {
                 display: inline-flex;
                 width: 100%;
-                height: calc(100vh - 43px);
+                height: calc(100vh - 83px);
+                margin-top: 40px;
+            }
+
+            :host {
+                font-family: 'Muli', 'Helvetica Neue', helvetica, arial;
+                display: block;
             }
         </style>
         <div class='chat-body'>
-            <contact-thread style='width:30%;'></contact-thread>
-            <message-body style='width:70%;'></message-body>
+            <paper-drawer-panel>
+                <contact-thread drawer user="[[user]]" threads="[[threads]]" selected-thread="{{selectedThread}}">
+                </contact-thread>
+                <message-body main user="{{user}}" thread="{{selectedThread}}"></message-body>
+            </paper-drawer-panel>
         </div>
     </template>
 </dom-module>

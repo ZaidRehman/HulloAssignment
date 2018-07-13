@@ -1,4 +1,4 @@
-import {Contact} from "../entities/contacts"
+import {Contact} from "../entities/Contacts"
 
 export interface IContactRepo {
     save(contact: Contact): Contact;

@@ -1,26 +1,34 @@
-﻿
-import { kernel } from "../kernel.cofig";
-import { User } from "../entities/user";
-var person = kernel.resolve<User>("User");
-
-
-var ContactThread = Polymer(<any>
+﻿var ContactThread = Polymer(<any>
     {
         is: 'contact-thread',
-        conditionalClass: function (name: String) {
-            return name === "Peter" ? 'selected' : ''
-        },
         properties:
         {
             prop: {
                 type: String,
                 value: 'Contact Thread'
             },
-            data: {
+            user: {
+                type: Object
+            },
+            threads: {
                 type: Array,
-                value: person.contact.getAll()
-            }
+                observer: '_threadsChanged'
+            },
+            selectedThread: {
+                notify: true
+            },
+            _selectedIndex: {
+                observer: '_selectedIndexChanged'
+            },
         },
-
+        _threadsChanged: function (n) {
+            this._selectedIndex = 0;
+        },
+        _selectedIndexChanged: function (idx) {
+            if (this.threads) {
+                console.log(this.threads[idx]);
+                this.$.selector.select(this.threads[idx]);
+            }
+        }
     });
 
