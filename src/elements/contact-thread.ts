@@ -17,6 +17,7 @@ var ContactThread = Polymer(<any>
             },
             threads: {
                 type: Array,
+                notify:true,
                 observer: '_threadsChanged'
             },
             selectedThread: {
@@ -31,7 +32,6 @@ var ContactThread = Polymer(<any>
         },
         _selectedIndexChanged: function (idx) {
             if (this.threads) {
-                console.log(this.threads[idx]);
                 this.$.selector.select(this.threads[idx]);
             }
         },

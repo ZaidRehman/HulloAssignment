@@ -15,7 +15,8 @@ export class ThreadRepoImpl implements IThread {
      {
         var result = threads.filter(thread => thread.title.toLowerCase().trim() === value.toLowerCase().trim())
         if(result.length === 0){
-            return new Thread((threads.length + 1).toString(), value, [])
+            var messages: Message[] = [];
+            return new Thread(threads.length.toString(), value, messages)
         }else {
             return result[0]["id"].toString()
         }

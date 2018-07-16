@@ -1,5 +1,6 @@
 import { kernel } from "../kernel.cofig";
 import { User } from "../entities/user";
+import { Thread } from "../entities/Thread";
 var person = kernel.resolve<User>("User");
 
 var ChatBody = Polymer(<any>{
@@ -7,7 +8,8 @@ var ChatBody = Polymer(<any>{
     properties: {
         threads: {
             type: Array,
-            value: person.threads.getThreads()
+            value: person.threads.getThreads(),
+            notify: true
         },
         user: {
             type: Object,
