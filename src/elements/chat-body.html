@@ -4,10 +4,13 @@
     <template>
         <style>
             .chat-body {
-                display: inline-flex;
                 width: 100%;
-                height: calc(100vh - 83px);
+                height: calc(100vh - 40px);
                 margin-top: 40px;
+            }
+
+            .m-t-0 {
+                margin-top: 0px
             }
 
             :host {
@@ -17,9 +20,9 @@
         </style>
         <div class='chat-body'>
             <paper-drawer-panel>
-                <contact-thread drawer user="[[user]]" threads="[[threads]]" selected-thread="{{selectedThread}}">
+                <contact-thread class='m-t-0' drawer user="[[user]]" threads="[[threads]]" selected-thread="{{selectedThread}}">
                 </contact-thread>
-                <message-body main user="{{user}}" thread="{{selectedThread}}"></message-body>
+                <message-body class='m-t-0' main user="{{user}}" thread="{{selectedThread}}"></message-body>
             </paper-drawer-panel>
         </div>
     </template>

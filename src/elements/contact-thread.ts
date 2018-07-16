@@ -36,17 +36,21 @@ var ContactThread = Polymer(<any>
             }
         },
         _addNewUser: function (e) {
-            var value : string = this.$.newUserInput.value
-            var result = person.threads.addNewThread(this.threads[this.threads.length - 1]["id"],value,this.threads)
-            if (result instanceof Thread) {
-                this.push('threads', result);
-                this._selectedIndex = result["id"]
-            }else if(typeof(result) === 'string'){
-                this._selectedIndex = result
-            }else{
-                console.log("Something went wrong with 'result' datatype",typeof result)
+            var value: string = this.$.newUserInput.value
+            if (value) {
+                var result = person.threads.addNewThread(value, this.threads)
+                if (result instanceof Thread) {
+                    this.push('threads', result);
+                    this._selectedIndex = result["id"]
+                } else if (typeof (result) === 'string') {
+                    this._selectedIndex = result
+                } else {
+                    console.log("Something went wrong with 'result' datatype", typeof result)
+                }
+                this.$.newUserInput.value = ''
+            }else {
+                alert("Enter valid name")
             }
-            this.$.newUserInput.value = ''
         }
     });
 

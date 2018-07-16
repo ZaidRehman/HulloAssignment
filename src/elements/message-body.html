@@ -5,8 +5,8 @@
 <dom-module id='message-body'>
     <template>
         <style>
-            .message-body {
-                width: 100%;
+            .sender {
+                text-align: right;
             }
 
             paper-input {
@@ -19,8 +19,8 @@
                 <template is="dom-repeat" items="[[thread.messages]]">
                     <paper-item>
                         <paper-item-body two-line>
-                            <div>[[item.sender]]</div>
-                            <div secondary>[[item.text]]</div>
+                            <div class$='{{isSendersMessage(item.sender)}}'>[[item.sender]]</div>
+                            <div class$='{{isSendersMessage(item.sender)}}' secondary>[[item.text]]</div>
                         </paper-item-body>
                     </paper-item>
                 </template>

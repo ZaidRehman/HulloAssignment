@@ -1,7 +1,8 @@
+import { kernel } from "../kernel.cofig";
+import { User } from "../entities/user";
+var person = kernel.resolve<User>("User");
 
-var Header
-
-Header = Polymer(<any>
+var Header = Polymer(<any>
   {
     is: 'chat-header',
 
@@ -9,7 +10,7 @@ Header = Polymer(<any>
     {
       name: {
         type: String,
-        value: 'Peter'
+        value: person.threads.getTitle()
       }
     },
 

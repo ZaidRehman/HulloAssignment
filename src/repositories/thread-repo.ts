@@ -1,4 +1,3 @@
-import { User } from "../entities/User";
 import { Message } from "../entities/Messages"
 import { Thread } from "../entities/Thread";
 
@@ -6,17 +5,17 @@ import { Thread } from "../entities/Thread";
 export interface IThread {
     getThreads(): Thread[];
     getTitle(): String;
-    addNewThread(id: string, title: string,threads: Thread[]): Thread;
+    addNewThread(title: string,threads: Thread[]): Thread;
 }
 
 export class ThreadRepoImpl implements IThread {
 
 
-    addNewThread(id: string, value: string,threads: Thread[]) : any
+    addNewThread(value: string,threads: Thread[]) : any
      {
         var result = threads.filter(thread => thread.title.toLowerCase().trim() === value.toLowerCase().trim())
         if(result.length === 0){
-            return new Thread((parseInt(id) + 1).toString(), value, [])
+            return new Thread((threads.length + 1).toString(), value, [])
         }else {
             return result[0]["id"].toString()
         }
