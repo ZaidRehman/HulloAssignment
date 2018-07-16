@@ -11,7 +11,7 @@ var ChatBody = Polymer(<any>{
         },
         user: {
             type: Object,
-            value: person.threads.getUser()
+            value: person.threads.getTitle()
         },
         selectedThread: {
             type: Object

@@ -4,21 +4,29 @@ import { Thread } from "../entities/Thread";
 
 
 export interface IThread {
-    getThreads() : Thread[];
-    getUser() : User; 
+    getThreads(): Thread[];
+    getTitle(): String;
+    addNewThread(id: string, title: string,threads: Thread[]): Thread;
 }
 
 export class ThreadRepoImpl implements IThread {
 
-    getUser(): any {
-        return {name:"Kevin"}
-    } 
+
+    addNewThread(id: string, value: string,threads: Thread[]) : any
+     {
+        var result = threads.filter(thread => thread.title.toLowerCase().trim() === value.toLowerCase().trim())
+        if(result.length === 0){
+            return new Thread((parseInt(id) + 1).toString(), value, [])
+        }else {
+            return result[0]["id"].toString()
+        }
+    }
 
     getThreads(): Thread[] {
         var ret: Thread[] = []
         var arr = [{
             id: "0",
-            title: "Slide Status",
+            title: "Kevin",
             messages: [{
                 user: "Kevin",
                 text: "Hey Rob, did you get your slides ready for Polymer Summit?"
@@ -31,7 +39,7 @@ export class ThreadRepoImpl implements IThread {
             }]
         }, {
             id: "1",
-            title: "Emoji Chat",
+            title: "Scott",
             messages: [{
                 user: "Rob",
                 text: "Do you know if there's there an emoji for hot sauce?"
@@ -41,7 +49,7 @@ export class ThreadRepoImpl implements IThread {
             }]
         }, {
             id: "2",
-            title: "Element Talk",
+            title: "Steve",
             messages: [{
                 user: "Steve",
                 text: "I can't believe how easy it is to add a backend to Polymer using Firebase.  You did a killer job on that element."
@@ -52,13 +60,18 @@ export class ThreadRepoImpl implements IThread {
         }]
 
         arr.forEach(thread => {
-            var messages:Message[] = []
+            var messages: Message[] = []
             thread.messages.forEach(message => {
-                messages.push(new Message(0,message.user,message.text))
+                messages.push(new Message(0, message.user, message.text))
             })
-            ret.push(new Thread(thread.id,thread.title,messages))
+            ret.push(new Thread(thread.id, thread.title, messages))
         })
 
         return ret
+    }
+
+
+    getTitle():String {
+        return "Rob"
     }
 }

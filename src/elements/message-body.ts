@@ -7,7 +7,7 @@ var MessageBody = Polymer(<any>{
           notify: true,
         },
         user: {
-          type: Object,
+          type: String,
           notify: true,
         }
     },
@@ -15,7 +15,7 @@ var MessageBody = Polymer(<any>{
         if (e.keyCode == 13) {
           this.push('thread.messages', {
             text: e.target.value,
-            sender: this.user.name
+            sender: this.user
           });
           e.target.value = '';
         }
