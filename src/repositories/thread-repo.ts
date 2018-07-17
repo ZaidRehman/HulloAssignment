@@ -1,5 +1,6 @@
 import { Message } from "../entities/Messages"
 import { Thread } from "../entities/Thread";
+var data = require('./data.json');
 
 export interface IThread {
     getThreads(): Thread[];
@@ -21,41 +22,7 @@ export class ThreadRepoImpl implements IThread {
 
     getThreads(): Thread[] {
         var ret: Thread[] = []
-        var arr = [{
-            id: "0",
-            title: "Kevin",
-            messages: [{
-                user: "Kevin",
-                text: "Hey Rob, did you get your slides ready for Polymer Summit?"
-            }, {
-                user: "Rob",
-                text: "Who me? You know I'm always prepared early for these things."
-            }, {
-                user: "Kevin",
-                text: "Figures, you're a pro.  Me? Finished last night in the hotel. LOL"
-            }]
-        }, {
-            id: "1",
-            title: "Scott",
-            messages: [{
-                user: "Rob",
-                text: "Do you know if there's there an emoji for hot sauce?"
-            }, {
-                user: "Scott",
-                text: "Hmmm, dunno.  Ask the emojineer on the team, she'll know."
-            }]
-        }, {
-            id: "2",
-            title: "Steve",
-            messages: [{
-                user: "Steve",
-                text: "I can't believe how easy it is to add a backend to Polymer using Firebase.  You did a killer job on that element."
-            }, {
-                user: "Rob",
-                text: "Thanks, man.  I agree, it's an awesome combination."
-            }]
-        }]
-
+        var arr = data
         arr.forEach(thread => {
             var messages: Message[] = []
             thread.messages.forEach(message => {

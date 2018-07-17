@@ -1,7 +1,7 @@
 ﻿import { kernel } from "../kernel.cofig";
-import { User } from "../entities/user";
 import { Thread } from "../entities/Thread";
-var person = kernel.resolve<User>("User");
+import { ThreadRepoImpl } from "../repositories/thread-repo";
+var threads = kernel.resolve<ThreadRepoImpl>("ThreadRepoImpl");
 
 var ContactThread = Polymer(<any>{
     is: 'contact-thread',
@@ -36,7 +36,7 @@ var ContactThread = Polymer(<any>{
     _addNewUser: function (e) {
         var value: string = this.$.newUserInput.value
         if (value) {
-            var result = person.threads.addNewThread(value, this.threads)
+            var result = threads.addNewThread(value, this.threads)
             if (result instanceof Thread) {
                 this.push('threads', result);
                 this._selectedIndex = result["id"]

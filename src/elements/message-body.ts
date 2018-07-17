@@ -1,6 +1,6 @@
 import { kernel } from "../kernel.cofig";
-import { User } from "../entities/user";
-var person = kernel.resolve<User>("User");
+import { ThreadRepoImpl } from "../repositories/thread-repo";
+var threads = kernel.resolve<ThreadRepoImpl>("ThreadRepoImpl");
 
 var MessageBody = Polymer(<any>{
   is: 'message-body',
@@ -28,6 +28,6 @@ var MessageBody = Polymer(<any>{
     }
   },
   isSendersMessage: function (title) {
-    return title === person.threads.getTitle() ? ' sender' : ''
+    return title === threads.getTitle() ? ' sender' : ''
   }
 });
