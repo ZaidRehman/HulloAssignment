@@ -8,15 +8,19 @@ var MessageBody = Polymer(<any>{
     thread: {
       type: Object,
       notify: true,
-      observer: "_logThread",
+    },
+    selectedIndex: {
+      type: String,
+      notify: true,
+      observer: '_getThread'
     },
     user: {
       type: String,
       notify: true,
     }
   },
-  _logThread: function (e) {
-    console.log("thread on update", this.thread);
+  _getThread: function () {
+    console.log('selected ',this.selectedIndex)
   },
   _handleInput: function (e) {
     if (e.keyCode == 13) {

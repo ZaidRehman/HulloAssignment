@@ -1,21 +1,22 @@
 import { Message } from "../entities/Messages"
 import { Thread } from "../entities/Thread";
-var data = require('./data.json');
+import { Contact } from "../entities/Contacts";
+var data = require('../../data.json');
 
 export interface IThread {
     getThreads(): Thread[];
     getTitle(): String;
-    addNewThread(title: string,threads: Thread[]): Thread;
+    addNewThread(title: string, threads: Thread[]): Thread;
+    getContacts(): Contact[];
 }
 
 export class ThreadRepoImpl implements IThread {
-    addNewThread(value: string,threads: Thread[]) : any
-     {
+    addNewThread(value: string, threads: Thread[]): any {
         var result = threads.filter(thread => thread.title.toLowerCase().trim() === value.toLowerCase().trim())
-        if(result.length === 0){
+        if (result.length === 0) {
             var messages: Message[] = [];
             return new Thread(threads.length.toString(), value, messages)
-        }else {
+        } else {
             return result[0]["id"].toString()
         }
     }
@@ -30,11 +31,16 @@ export class ThreadRepoImpl implements IThread {
             })
             ret.push(new Thread(thread.id, thread.title, messages))
         })
-
         return ret
     }
 
-    getTitle():String {
+    getContacts(): Contact[] {
+        return data.map(thread => {
+            return new Contact(thread.id, thread.title)
+        })
+    }
+
+    getTitle(): String {
         return "Rob"
     }
 }

@@ -8,14 +8,22 @@ var ChatBody = Polymer(<any>{
         threads: {
             type: Array,
             value: threads.getThreads(),
-            notify: true
+            notify: true,
+        },
+        contacts: {
+            type: Array,
+            value: threads.getContacts(),
         },
         user: {
             type: Object,
-            value: threads.getTitle()
+            value: threads.getTitle(),
         },
         selectedThread: {
-            type: Object
+            type: Object,
         },
+        selectedIndex: {
+            type: String,
+            notify: true,
+        }
     }
 });

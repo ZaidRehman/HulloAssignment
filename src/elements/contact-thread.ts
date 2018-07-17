@@ -29,9 +29,8 @@ var ContactThread = Polymer(<any>{
         this._selectedIndex = 0;
     },
     _selectedIndexChanged: function (idx) {
-        if (this.threads) {
-            this.$.selector.select(this.threads[idx]);
-        }
+        console.log(idx)
+        //this.selectedThread = 
     },
     _addNewUser: function (e) {
         var value: string = this.$.newUserInput.value
