@@ -16,11 +16,10 @@
 
       .sidebar {
         background-color: rgba(240, 239, 238, 0.959);
-        /* height: calc(100% - 100px); */
         width: 100%;
       }
 
-      .width-100-perc {
+      .main-div {
         background-color: rgba(240, 239, 238, 0.959);
         width: 100%;
         height: 100%;
@@ -37,7 +36,7 @@
         font-size: 24px;
         height: 55px;
         padding: 5px;
-
+        margin: 0px;
       }
 
       .selected {
@@ -52,18 +51,14 @@
         min-width: inherit;
         background-color: green;
       }
-
-      
     </style>
 
-    <div class="width-100-perc">
+    <div class="main-div">
       <paper-menu selected="{{_selectedIndex}}" class="sidebar">
         <template is="dom-repeat" items="[[threads]]">
           <paper-item id="[[item.id]]">
             <paper-item-body two-line>
-              <div>
-                <span class="sidebar-text">[[item.title]]</span>
-              </div>
+              <p class="sidebar-text">[[item.title]]</p>
             </paper-item-body>
           </paper-item>
         </template>
@@ -73,7 +68,6 @@
         <paper-input id="newUserInput" class="newUserInput" label="Add Friend"></paper-input>
         <paper-button toggles raised class="green btn" on-tap="_addNewUser">+</paper-button>
       </div>
-
     </div>
 
   </template>

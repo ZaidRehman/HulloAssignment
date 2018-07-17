@@ -13,7 +13,6 @@
                 padding: 10px;
             }
         </style>
-
         <div class='message-body'>
             <div class="list">
                 <template is="dom-repeat" items="[[thread.messages]]">
@@ -25,10 +24,7 @@
                     </paper-item>
                 </template>
             </div>
-
             <paper-input label="New Message:" on-keyup="_handleInput"></paper-input>
         </div>
-
     </template>
-
 </dom-module>
