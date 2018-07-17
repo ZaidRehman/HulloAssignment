@@ -1,4 +1,4 @@
-import {User} from '../entities/User'
+import { User } from '../entities/User'
 
 export interface IUserRepo {
     save(user: User): User;
@@ -6,21 +6,17 @@ export interface IUserRepo {
 }
 
 export class UserRepoImpl implements IUserRepo {
-
     save(user: User): User {
-
         return user
     }
 
     getAll(): User[] {
         var ret: User[] = []
-        let arr = [
-            {
-                id: "0",
-                name: "test"
-            }
-        ]
-        arr.forEach( user => {
+        let arr = [{
+            id: "0",
+            name: "test"
+        }]
+        arr.forEach(user => {
             //ret.push(new User(user.id,user.name))
         })
         return ret

@@ -1,4 +1,4 @@
-import {Contact} from "../entities/Contacts"
+import { Contact } from "../entities/Contacts"
 
 export interface IContactRepo {
     save(contact: Contact): Contact;
@@ -16,10 +16,10 @@ export class ContactRepoImpl implements IContactRepo {
         let arr = [{
             id: "0",
             name: "Molly"
-        },{
+        }, {
             id: "1",
             name: "Peter"
-        },{
+        }, {
             id: "2",
             name: "Kira"
         }];

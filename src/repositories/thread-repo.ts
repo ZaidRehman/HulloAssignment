@@ -1,7 +1,6 @@
 import { Message } from "../entities/Messages"
 import { Thread } from "../entities/Thread";
 
-
 export interface IThread {
     getThreads(): Thread[];
     getTitle(): String;
@@ -9,8 +8,6 @@ export interface IThread {
 }
 
 export class ThreadRepoImpl implements IThread {
-
-
     addNewThread(value: string,threads: Thread[]) : any
      {
         var result = threads.filter(thread => thread.title.toLowerCase().trim() === value.toLowerCase().trim())
@@ -69,7 +66,6 @@ export class ThreadRepoImpl implements IThread {
 
         return ret
     }
-
 
     getTitle():String {
         return "Rob"

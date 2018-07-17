@@ -1,7 +1,6 @@
 import { Message } from "./Messages";
 
 export class Thread {
-
     public id: string;
     public title: string;
     public messages: Message[];
@@ -11,5 +10,4 @@ export class Thread {
         this.title = title;
         this.messages = messages;
     }
-
 }

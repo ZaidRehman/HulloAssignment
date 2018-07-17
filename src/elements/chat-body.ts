@@ -1,6 +1,5 @@
 import { kernel } from "../kernel.cofig";
 import { User } from "../entities/user";
-import { Thread } from "../entities/Thread";
 var person = kernel.resolve<User>("User");
 
 var ChatBody = Polymer(<any>{

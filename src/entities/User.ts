@@ -3,11 +3,8 @@ import { MessageRepoImpl } from '../repositories/messages-repo'
 import { ContactRepoImpl } from '../repositories/contacts-repo'
 import { ThreadRepoImpl } from '../repositories/thread-repo';
 
-
-
 @Inject("MessageRepoImpl", "ContactRepoImpl", "ThreadRepoImpl")
 export class User {
-
     name: String
     contact: ContactRepoImpl
     message: MessageRepoImpl
