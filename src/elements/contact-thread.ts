@@ -1,5 +1,4 @@
 ﻿import { kernel } from "../kernel.cofig";
-import { Thread } from "../entities/Thread";
 import { ThreadRepoImpl } from "../repositories/thread-repo";
 import { Contact } from "../entities/Contacts";
 var threads = kernel.resolve<ThreadRepoImpl>("ThreadRepoImpl");

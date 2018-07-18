@@ -1,6 +1,4 @@
 import { TypeBinding, Kernel, TypeBindingScopeEnum } from "./../inversify/inversify";
-
-//Repos
 import { ThreadRepoImpl } from "./repositories/thread-repo";
 
 var kernel = new Kernel();
