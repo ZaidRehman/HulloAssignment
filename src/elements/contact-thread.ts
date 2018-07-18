@@ -19,39 +19,30 @@ var ContactThread = Polymer(<any>{
         },
         selectedIndex: {
             notify: true,
-            observer: 'selectedIndexChanged'
         },
         contacts: {
             type: Array,
             notify: true,
-            observer: 'logContacts'
         }
     },
     _threadsChanged: function (n) {
         this.selectedIndex = 0;
     },
-    selectedIndexChanged: function (idx) {
-        console.log(idx)
-    },
-    logContacts: function(val) {
-        console.log('contacts',val)
-    },
     _addNewUser: function (e) {
         var value: string = this.$.newUserInput.value
         if (value) {
-            var result = threads.addNewContact(value)
+            var result = threads.addNewContact(value);
             if (result instanceof Contact) {
                 this.push('contacts',result);
-                console.log('result',result["id"])
-                this.selectedIndex = result["id"]
+                this.selectedIndex = result["id"];
             } else if (typeof (result) === 'string') {
-                this.selectedIndex = result
+                this.selectedIndex = result;
             } else {
-                console.log("Something went wrong with 'result' datatype", typeof result)
+                console.log("Something went wrong with 'result' datatype", typeof result);
             }
-            this.$.newUserInput.value = ''
+            this.$.newUserInput.value = '';
         } else {
-            alert("Enter valid name")
+            alert("Enter valid name");
         }
     }
 });

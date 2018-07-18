@@ -22,12 +22,10 @@ var MessageBody = Polymer(<any>{
     }
   },
   _getThread: function (idx) {
-    console.log('selected',idx)
-    console.log('threads',threads.getThread(idx))
-    var t = threads.getThread(idx)
+    var t = threads.getThread(idx);
     if(!t){
       var messages : Message[] = []
-      t = new Thread(idx,'',messages)
+      t = new Thread(idx,'',messages);
     }
     this.thread = t
   },
@@ -41,6 +39,6 @@ var MessageBody = Polymer(<any>{
     }
   },
   isSendersMessage: function (title) {
-    return title === threads.getTitle() ? ' sender' : ''
+    return title === threads.getTitle() ? ' sender' : '';
   }
 });

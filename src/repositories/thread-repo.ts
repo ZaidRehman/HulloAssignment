@@ -17,14 +17,14 @@ export class ThreadRepoImpl implements IThread {
 
     constructor() {
         this.threads = data.map(thread => {
-            var messages: Message[] = []
+            var messages: Message[] = [];
             messages = thread.messages.map(message => {
-                return new Message(0, message.user, message.text)
+                return new Message(0, message.user, message.text);
             })
-            return new Thread(thread.id, thread.title, messages)
+            return new Thread(thread.id, thread.title, messages);
         })
         this.contacts = data.map(thread => {
-            return new Contact(thread.id, thread.title)
+            return new Contact(thread.id, thread.title);
         })
     }
 
@@ -32,34 +32,30 @@ export class ThreadRepoImpl implements IThread {
         var result = this.threads.filter(thread => thread.title.toLowerCase().trim() === value.toLowerCase().trim())
         if (result.length === 0) {
             var messages: Message[] = [];
-            var id = this.threads.length.toString()
-            this.threads.push(new Thread(id, value, messages))
-            this.contacts.push(new Contact(id, value))
-            console.log('threads repo',this.threads)
-            return new Contact(id, value)
+            var id = this.threads.length.toString();
+            this.threads.push(new Thread(id, value, messages));
+            this.contacts.push(new Contact(id, value));
+            return new Contact(id, value);
         } else {
-            return result[0]["id"].toString()
+            return result[0]["id"].toString();
         }   
     }
 
     getThreads(): Thread[] {
-        console.log('getThreads id', this.threads)
-        return this.threads
+        return this.threads;
     }
 
     getThread(id: String): Thread {
-        console.log('getThread',this.threads)
-        console.log('getThread id',id)
         return this.threads.filter(thread => {
-            return thread.id == id
+            return thread.id == id;
         })[0]
     }
 
     getContacts(): Contact[] {
-        return this.contacts
+        return this.contacts;
     }
 
     getTitle(): String {
-        return "Rob"
+        return "Rob";
     }
 }
