@@ -22,9 +22,9 @@
         </style>
         <div class='chat-body'>
             <paper-drawer-panel>
-                <contact-thread drawer user="[[user]]" threads="{{threads}}" selected-thread="{{selectedThread}}">
+                <contact-thread drawer user="[[user]]" contacts="{{contacts}}" selected-index="{{selectedIndex}}">
                 </contact-thread>
-                <message-body main user="{{user}}" thread="{{selectedThread}}"></message-body>
+                <message-body main user="{{user}}" selected-index={{selectedIndex}}></message-body>
             </paper-drawer-panel>
         </div>
     </template>
