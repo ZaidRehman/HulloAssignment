@@ -1,6 +1,7 @@
 ﻿import { kernel } from "../kernel.cofig";
 import { Thread } from "../entities/Thread";
 import { ThreadRepoImpl } from "../repositories/thread-repo";
+import { Contact } from "../entities/Contacts";
 var threads = kernel.resolve<ThreadRepoImpl>("ThreadRepoImpl");
 
 var ContactThread = Polymer(<any>{
@@ -13,34 +14,38 @@ var ContactThread = Polymer(<any>{
         user: {
             type: Object
         },
-        threads: {
-            type: Array,
-            notify: true,
-            observer: '_threadsChanged'
-        },
         selectedThread: {
             notify: true
         },
-        _selectedIndex: {
-            observer: '_selectedIndexChanged'
+        selectedIndex: {
+            notify: true,
+            observer: 'selectedIndexChanged'
         },
+        contacts: {
+            type: Array,
+            notify: true,
+            observer: 'logContacts'
+        }
     },
     _threadsChanged: function (n) {
-        this._selectedIndex = 0;
+        this.selectedIndex = 0;
     },
-    _selectedIndexChanged: function (idx) {
+    selectedIndexChanged: function (idx) {
         console.log(idx)
-        //this.selectedThread = 
+    },
+    logContacts: function(val) {
+        console.log('contacts',val)
     },
     _addNewUser: function (e) {
         var value: string = this.$.newUserInput.value
         if (value) {
-            var result = threads.addNewThread(value, this.threads)
-            if (result instanceof Thread) {
-                this.push('threads', result);
-                this._selectedIndex = result["id"]
+            var result = threads.addNewContact(value)
+            if (result instanceof Contact) {
+                this.push('contacts',result);
+                console.log('result',result["id"])
+                this.selectedIndex = result["id"]
             } else if (typeof (result) === 'string') {
-                this._selectedIndex = result
+                this.selectedIndex = result
             } else {
                 console.log("Something went wrong with 'result' datatype", typeof result)
             }

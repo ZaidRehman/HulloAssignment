@@ -1,5 +1,7 @@
 import { kernel } from "../kernel.cofig";
 import { ThreadRepoImpl } from "../repositories/thread-repo";
+import { Thread } from "../entities/Thread";
+import { Message } from "../entities/Messages";
 var threads = kernel.resolve<ThreadRepoImpl>("ThreadRepoImpl");
 
 var MessageBody = Polymer(<any>{
@@ -19,8 +21,15 @@ var MessageBody = Polymer(<any>{
       notify: true,
     }
   },
-  _getThread: function () {
-    console.log('selected ',this.selectedIndex)
+  _getThread: function (idx) {
+    console.log('selected',idx)
+    console.log('threads',threads.getThread(idx))
+    var t = threads.getThread(idx)
+    if(!t){
+      var messages : Message[] = []
+      t = new Thread(idx,'',messages)
+    }
+    this.thread = t
   },
   _handleInput: function (e) {
     if (e.keyCode == 13) {

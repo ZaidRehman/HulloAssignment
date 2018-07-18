@@ -55,7 +55,7 @@
       }
     </style>
     <div class="main-div">
-      <paper-menu selected="{{_selectedIndex}}" class="sidebar">
+      <paper-menu selected="{{selectedIndex}}" class="sidebar">
         <template is="dom-repeat" items="[[contacts]]">
           <paper-item id="[[item.id]]">
             <paper-item-body two-line>
@@ -64,7 +64,6 @@
           </paper-item>
         </template>
       </paper-menu>
-      <!-- <array-selector id="selector" items="{{threads}}" selected-item="{{selectedThread}}"></array-selector> -->
       <div class="new-user-div">
         <paper-input id="newUserInput" class="newUserInput" label="Add Friend"></paper-input>
         <paper-button toggles raised class="green btn" on-tap="_addNewUser">+</paper-button>

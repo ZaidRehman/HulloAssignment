@@ -5,11 +5,6 @@ var threads = kernel.resolve<ThreadRepoImpl>("ThreadRepoImpl");
 var ChatBody = Polymer(<any>{
     is: 'chat-body',
     properties: {
-        threads: {
-            type: Array,
-            value: threads.getThreads(),
-            notify: true,
-        },
         contacts: {
             type: Array,
             value: threads.getContacts(),
@@ -24,6 +19,7 @@ var ChatBody = Polymer(<any>{
         selectedIndex: {
             type: String,
             notify: true,
+            value: "0"
         }
     }
 });
